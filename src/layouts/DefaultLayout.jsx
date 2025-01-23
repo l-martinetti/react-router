@@ -1,9 +1,10 @@
-import { Outlet } from 'react'
+import { Outlet } from 'react-router-dom'
+import MainNav from '../components/MainNav'
 
 const DefaultLayout = () => {
     return (
         <>
-            <header></header>
+            <header><MainNav /></header>
             <main>
                 <Outlet />
             </main>
