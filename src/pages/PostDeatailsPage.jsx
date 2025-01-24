@@ -24,11 +24,9 @@ const PostDeatailsPage = () => {
     }, [])
 
     const handlePrev = () => {
-        const nextId = post.id < 6 ? post.id - 1 : 1;
-
-        axios.get(`${baseApiUrl}/posts/${nextId}`)
+        axios.get(`${baseApiUrl}/posts/${post.id - 1}`)
             .then(res => {
-                navigate(`/lista-post/${nextId}`);
+                navigate(`/lista-post/${post.id - 1}`);
                 setPost(res.data)
             })
             .catch(error => {
@@ -37,11 +35,9 @@ const PostDeatailsPage = () => {
     }
 
     const handleNext = () => {
-        const nextId = post.id < 6 ? post.id + 1 : 1;
-
-        axios.get(`${baseApiUrl}/posts/${nextId}`)
+        axios.get(`${baseApiUrl}/posts/${post.id + 1}`)
             .then(res => {
-                navigate(`/lista-post/${nextId}`);
+                navigate(`/lista-post/${post.id + 1}`);
                 setPost(res.data)
             })
             .catch(error => {
