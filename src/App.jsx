@@ -16,7 +16,7 @@ function App() {
             <Route path="/" Component={HomePage} />
             <Route path="/chi-siamo" Component={About} />
             <Route path="/lista-post" Component={PostList} />
-            <Route path="/lista-post/id" Component={PostDeatails} />
+            <Route path="/lista-post/:id" Component={PostDeatails} />
           </Route>
         </Routes>
       </BrowserRouter>
